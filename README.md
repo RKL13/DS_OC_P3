@@ -1,12 +1,9 @@
-# Conceptualize an application and provide an actionable data set for public health based on Openfoodfacts's data
+# Conceptualize an application for public health
 
-### Mission
+### Overview : Analysis of the Nutriscore, conception of a new score upon the weaknesses of the preceding. Cleaning of the OpenFoodFacts dataset.
 
-Starting from OpenFoodFacts data, we had to imagine an application for public health. 
+Starting from the 3 GB dataset of OpenFoodFacts, the data is cleaned using several techniques: feature selection (the features that allow computing the Nutriscore), regular expressions, drops, imputations by statistics, imputations by models (KNN, Linear regression), and outlier detection. 
 
-Long story short, the application would allow users to scan a basket's products and communicate the total basket's healthiness. 
-As we wanted to put the user in a virtuous circle, we shifted the application from communicating on a basket value without referential. Instead, we considered a ratio of improvement computed in between two baskets from the same user a t one and t-1 one. In doing so, we considered that we could "nudge" the habits of a user by promoting little changes in the long run rather than drastic changes that won't last. 
+The dataset (the nutriscore) is analyzed through univariate analysis, bivariate analysis (Pearson, ANOVA, Komogorov-Smirnov, Levene, Kruskal-Wallis, QQPlot) and multivariate analysis with a principal component analysis for visualisation. 
 
-We were asked to prepare data for the development team to implement the conceptualized app. 
-
-This was the occasion to strengthen our data cleaning skills (among others, using several imputation techniques, several approaches to detect outliers, etc.), our statistical skills (using several hypothesis tests), and improve our data visualization skills using dimensionality reduction (PCA here).
+The nudge score is imagined in response to this analysis which is an evolutional rate in between a n and n+1 basket scores.
